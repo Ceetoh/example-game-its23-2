@@ -7,6 +7,11 @@ from button import Button
 from player import Player
 from bubble import Bubble
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+from scoreboard import Scoreboard
+from game_stats import GameStats
+>>>>>>> play-button-and-game-score
 =======
 from scoreboard import Scoreboard
 from game_stats import GameStats
@@ -22,7 +27,10 @@ def run_game():
     pygame.display.set_caption(gm_settings.caption)
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> play-button-and-game-score
     
     play_button = Button(gm_settings, screen, "Play")
     
@@ -34,6 +42,9 @@ def run_game():
     
     sb = Scoreboard(gm_settings, screen, stats)
     
+<<<<<<< HEAD
+>>>>>>> play-button-and-game-score
+=======
 >>>>>>> play-button-and-game-score
     clock = pygame.time.Clock()
     
@@ -45,6 +56,7 @@ def run_game():
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     while True:
         gf.check_events(gm_settings, screen, player, bubbles)
         player.update()
@@ -53,6 +65,8 @@ def run_game():
         gf.update_screen(gm_settings, screen, player, bubbles, clock)
         
 =======
+=======
+>>>>>>> play-button-and-game-score
 
 
     while True:
@@ -64,5 +78,8 @@ def run_game():
         else:
             bubbles.empty()
         gf.update_screen(gm_settings, screen, player, bubbles, clock, stats, play_button, sb)    
+<<<<<<< HEAD
+>>>>>>> play-button-and-game-score
+=======
 >>>>>>> play-button-and-game-score
 run_game()
