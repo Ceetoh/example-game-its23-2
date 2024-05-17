@@ -43,4 +43,8 @@ class Player(pygame.sprite.Sprite):
         
     def blit_me(self):
         self.screen.blit(self.player, self.rect)
+<<<<<<< HEAD
         
+=======
+        
+>>>>>>> play-button-and-game-score

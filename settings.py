@@ -12,5 +12,9 @@ class Settings:
         
         self.bubble_min_r = 10
         self.bubble_max_r = 50
+<<<<<<< HEAD
         
         
+=======
+        
+>>>>>>> play-button-and-game-score

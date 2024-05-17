@@ -31,7 +31,11 @@ class Bubble(pygame.sprite.Sprite):
         self.rect = self.bubble.get_rect(
             center=(
                 random.randint(game_settings.screen_height + 20, game_settings.screen_width + 100),
+<<<<<<< HEAD
                 random.randint(0, game_settings.screen_height),               
+=======
+                random.randint(0, game_settings.screen_height),
+>>>>>>> play-button-and-game-score
                 )
             )
         self.speed = random.randint(1, 5)
