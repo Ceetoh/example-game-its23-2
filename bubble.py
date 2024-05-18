@@ -1,45 +1,46 @@
 import pygame
-import random
 
-class Bubble(pygame.sprite.Sprite):
+class Player(pygame.sprite.Sprite):
     
     
     
-    def __init__(self, screen, game_settings):
+    def __init__(self, screen):
         
-        super(Bubble, self).__init__()
+        super(Player, self).__init__()
         
         self.screen = screen
         self.screen_rect = screen.get_rect()
         
+        self.player = pygame.Surface((75, 25))
+        self.player.fill((255, 0, 0))
+        self.rect = self.player.get_rect()
         
-        self.bubble_radius = random.randint(game_settings.bubble_min_r, game_settings.bubble_max_r)
+        self.moving_right = False
+        self.moving_left = False
+        self.moving_up = False
+        self.moving_down = False
         
-        self.bubble = pygame.Surface((self.bubble_radius * 2, self.bubble_radius * 2), pygame.SRCALPHA)
-        
-        self.bubble.set_colorkey(game_settings.bg_color)
-        
-        self.bubble.set_alpha(128)
-        
-        self.rect = pygame.draw.circle(
-            self.bubble,
-            (255, 255, 255),
-            (self.bubble_radius, self.bubble_radius),
-            self.bubble_radius,
-            2)
-        
-        self.rect = self.bubble.get_rect(
-            center=(
-                random.randint(game_settings.screen_height + 20, game_settings.screen_width + 100),
-                random.randint(0, game_settings.screen_height),               
-                )
-            )
-        self.speed = random.randint(1, 5)
-        
+    
     def update(self):
-        self.rect.move_ip(-5, 0)
-        if self.rect.right < 0:
-            self.kill()
+        if self.moving_right:
+            self.rect.move_ip(5, 0)
+        if self.moving_left:
+            self.rect.move_ip(-5, 0)
+        if self.moving_up:
+            self.rect.move_ip(0, -5)
+        if self.moving_down:
+            self.rect.move_ip(0, 5)
             
+        if self.moving_left and self.rect.left < 0:
+            self.rect.left = 0
+        if self.moving_right and self.rect.right > self.screen_rect.right:
+            self.rect.right = self.screen_rect.right
+        if self.moving_up and self.rect.top <= 0:
+            self.rect.top = 0
+        if self.moving_down and self.rect.bottom >= self.screen_rect.bottom:
+            self.rect.bottom = self.screen_rect.bottom
+        
+        
     def blit_me(self):
-        self.screen.blit(self.bubble, self.rect)
+        self.screen.blit(self.player, self.rect)
+        
