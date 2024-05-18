@@ -33,7 +33,11 @@ class Bubble(pygame.sprite.Sprite):
                 random.randint(game_settings.screen_height + 20, game_settings.screen_width + 100),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 random.randint(0, game_settings.screen_height),               
+=======
+                random.randint(0, game_settings.screen_height),
+>>>>>>> play-button-and-game-score
 =======
                 random.randint(0, game_settings.screen_height),
 >>>>>>> play-button-and-game-score

@@ -8,6 +8,11 @@ from player import Player
 from bubble import Bubble
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+from scoreboard import Scoreboard
+from game_stats import GameStats
+>>>>>>> play-button-and-game-score
 =======
 from scoreboard import Scoreboard
 from game_stats import GameStats
@@ -28,7 +33,10 @@ def run_game():
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> play-button-and-game-score
 =======
 >>>>>>> play-button-and-game-score
     
@@ -43,6 +51,9 @@ def run_game():
     sb = Scoreboard(gm_settings, screen, stats)
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> play-button-and-game-score
+=======
 >>>>>>> play-button-and-game-score
 =======
 >>>>>>> play-button-and-game-score
@@ -57,6 +68,7 @@ def run_game():
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     while True:
         gf.check_events(gm_settings, screen, player, bubbles)
         player.update()
@@ -65,6 +77,8 @@ def run_game():
         gf.update_screen(gm_settings, screen, player, bubbles, clock)
         
 =======
+=======
+>>>>>>> play-button-and-game-score
 =======
 >>>>>>> play-button-and-game-score
 
@@ -79,6 +93,9 @@ def run_game():
             bubbles.empty()
         gf.update_screen(gm_settings, screen, player, bubbles, clock, stats, play_button, sb)    
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> play-button-and-game-score
+=======
 >>>>>>> play-button-and-game-score
 =======
 >>>>>>> play-button-and-game-score

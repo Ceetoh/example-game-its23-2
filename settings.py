@@ -14,8 +14,12 @@ class Settings:
         self.bubble_max_r = 50
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         
+=======
+        
+>>>>>>> play-button-and-game-score
 =======
         
 >>>>>>> play-button-and-game-score
