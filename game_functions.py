@@ -41,15 +41,7 @@ def check_events(game_settings, screen, player, bubbles, stats, play_button):
 def check_play_button(stats, play_button, mouse_x, mouse_y, bubbles):
     if play_button.rect.collidepoint(mouse_x, mouse_y):
         stats.game_active = True
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> play-button-and-game-score
-=======
-            
->>>>>>> play-button-and-game-score
 def create_bubble(game_settings, screen, bubbles):
     new_bubble = Bubble(screen, game_settings)
     bubbles.add(new_bubble)
@@ -81,4 +73,3 @@ def update_screen(game_settings, screen, player, bubbles, clock, stats, play_but
         play_button.draw_button()
     
     pygame.display.flip()
-    
