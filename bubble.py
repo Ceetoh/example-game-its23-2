@@ -1,6 +1,7 @@
 import pygame
 import random
 
+
 class Bubble(pygame.sprite.Sprite):
 
 
@@ -35,11 +36,10 @@ class Bubble(pygame.sprite.Sprite):
                 )
             )
         self.speed = random.randint(1, 5)
-
+    def blit_me(self):
+        self.screen.blit(self.bubble, self.rect)
     def update(self):
         self.rect.move_ip(-5, 0)
         if self.rect.right < 0:
             self.kill()
 
-    def blit_me(self):
-        self.screen.blit(self.bubble, self.rect)

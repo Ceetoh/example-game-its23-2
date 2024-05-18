@@ -73,3 +73,4 @@ def update_screen(game_settings, screen, player, bubbles, clock, stats, play_but
         play_button.draw_button()
     
     pygame.display.flip()
+    
