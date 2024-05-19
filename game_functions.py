@@ -57,6 +57,8 @@ def update_bubbles(player, bubbles, stats, sb, game_settings):
             stats.level += 1
             sb.prepare_level()
             stats.bonus += 1
+            stats.min_speed += 1
+            stats.max_speed += 1
         hitted_bubble.kill()
             
         
