@@ -13,7 +13,7 @@ def check_events(game_settings, screen, player, bubbles, stats, play_button):
     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            sys.exit()
+            update_record_and_quit(stats)
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RIGHT:
                 player.moving_right = True
@@ -81,4 +81,8 @@ def update_screen(game_settings, screen, player, bubbles, clock, stats, play_but
         play_button.draw_button()
     
     pygame.display.flip()
+    
+def update_record_and_quit(stats):
+    stats.record_saver(stats.score)
+    sys.exit()
     
